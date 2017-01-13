@@ -28,9 +28,9 @@ module.exports = {
                 loader: 'vue-loader',
                 options: {
                     loaders: {
-                        css: ExtractTextPlugin.extract('css-loader'),
-                        less: ExtractTextPlugin.extract('css-loader!less-loader'),
-                    },
+                        css: 'css-loader',
+                        less: 'css-loader!less-loader'
+                    }
                 },
             },
         ],
@@ -39,6 +39,6 @@ module.exports = {
         new webpack.DefinePlugin({
             'VERSION': JSON.stringify(config.version),
         }),
-        new ExtractTextPlugin(outputFile + '.css'),
+        // new ExtractTextPlugin(outputFile + '.css'),
     ],
 }
