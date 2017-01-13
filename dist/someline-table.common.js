@@ -157,20 +157,28 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Test_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Test_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_Test_vue__);
-Object.defineProperty(exports, "__esModule", { value: true });
-/* harmony reexport (default from non-hamory) */ __webpack_require__.d(exports, "Test", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Test_vue___default.a; });
-/* harmony export (immutable) */ exports["install"] = install;
+'use strict';
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Test = undefined;
+exports.install = install;
+
+var _Test = __webpack_require__(0);
+
+var _Test2 = _interopRequireDefault(_Test);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Install the components
 function install(Vue) {
-  Vue.component('test', __WEBPACK_IMPORTED_MODULE_0__components_Test_vue___default.a);
+  Vue.component('test', _Test2.default);
   /* -- Add more components here -- */
 }
 
 // Expose the components
+exports.Test = _Test2.default;
 
 
 /* -- Plugin definition & Auto-install -- */
@@ -183,9 +191,10 @@ var plugin = {
   install: install
 };
 
-/* harmony default export */ exports["default"] = plugin;
+exports.default = plugin;
 
 // Auto-install
+
 var GlobalVue = null;
 if (typeof window !== 'undefined') {
   GlobalVue = window.Vue;
