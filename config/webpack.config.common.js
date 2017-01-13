@@ -18,11 +18,11 @@ module.exports = merge(base, {
     // Example: 'lodash': 'lodash'
   },
   plugins: [
-    // new webpack.optimize.UglifyJsPlugin({
-    //   compress: {
-    //     warnings: true,
-    //   },
-    //   mangle: false,
-    // }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: true,
+      },
+      mangle: false,
+    }),
   ],
 })
