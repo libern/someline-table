@@ -1,14 +1,17 @@
 import Test from './components/Test.vue'
+import Test2 from './components/Test2.vue'
 
 // Install the components
 export function install (Vue) {
   Vue.component('test', Test)
+  Vue.component('someline-table-test', Test2)
   /* -- Add more components here -- */
 }
 
 // Expose the components
 export {
   Test,
+  Test2,
   /* -- Add more components here -- */
 }
 

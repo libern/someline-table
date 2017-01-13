@@ -64,7 +64,7 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -77,10 +77,10 @@ var __vue_styles__ = {}
 /* styles */
 
 /* script */
-__vue_exports__ = __webpack_require__(1)
+__vue_exports__ = __webpack_require__(2)
 
 /* template */
-var __vue_template__ = __webpack_require__(2)
+var __vue_template__ = __webpack_require__(4)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -101,6 +101,38 @@ module.exports = __vue_exports__
 
 /***/ },
 /* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = {}
+
+/* styles */
+
+/* script */
+__vue_exports__ = __webpack_require__(3)
+
+/* template */
+var __vue_template__ = __webpack_require__(5)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-58897781"
+
+module.exports = __vue_exports__
+
+
+/***/ },
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -124,7 +156,32 @@ Object.defineProperty(exports, "__esModule", { value: true });
 };
 
 /***/ },
-/* 2 */
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ exports["default"] = {
+  name: 'test',
+
+  data: function data() {
+    return {
+      name: 'world'
+    };
+  }
+};
+
+/***/ },
+/* 4 */
 /***/ function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -153,32 +210,58 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 },staticRenderFns: []}
 
 /***/ },
-/* 3 */
+/* 5 */
+/***/ function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "test"
+  }, [_c('h1', [_vm._v("Hello someline-table 2!")]), _vm._v(" "), _c('h2', [_vm._v("Hello someline-table 2 ! YEAH!")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.name),
+      expression: "name"
+    }],
+    attrs: {
+      "placeholder": "Name"
+    },
+    domProps: {
+      "value": _vm._s(_vm.name)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.name = $event.target.value
+      }
+    }
+  })])
+},staticRenderFns: []}
+
+/***/ },
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-'use strict';
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Test_vue__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Test_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_Test_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Test2_vue__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Test2_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_Test2_vue__);
+Object.defineProperty(exports, "__esModule", { value: true });
+/* harmony reexport (default from non-hamory) */ __webpack_require__.d(exports, "Test", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Test_vue___default.a; });
+/* harmony reexport (default from non-hamory) */ __webpack_require__.d(exports, "Test2", function() { return __WEBPACK_IMPORTED_MODULE_1__components_Test2_vue___default.a; });
+/* harmony export (immutable) */ exports["install"] = install;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Test = undefined;
-exports.install = install;
 
-var _Test = __webpack_require__(0);
-
-var _Test2 = _interopRequireDefault(_Test);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Install the components
 function install(Vue) {
-  Vue.component('test', _Test2.default);
+  Vue.component('test', __WEBPACK_IMPORTED_MODULE_0__components_Test_vue___default.a);
+  Vue.component('someline-table-test', __WEBPACK_IMPORTED_MODULE_1__components_Test2_vue___default.a);
   /* -- Add more components here -- */
 }
 
 // Expose the components
-exports.Test = _Test2.default;
 
 
 /* -- Plugin definition & Auto-install -- */
@@ -191,10 +274,9 @@ var plugin = {
   install: install
 };
 
-exports.default = plugin;
+/* harmony default export */ exports["default"] = plugin;
 
 // Auto-install
-
 var GlobalVue = null;
 if (typeof window !== 'undefined') {
   GlobalVue = window.Vue;

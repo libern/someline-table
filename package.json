@@ -14,7 +14,6 @@
   "license": "MIT",
   "main": "dist/someline-table.common.js",
   "unpkg": "dist/someline-table.browser.js",
-  "module": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --config config/webpack.config.dev.js --progress --watch",
     "build": "npm run build:browser && npm run build:common",
