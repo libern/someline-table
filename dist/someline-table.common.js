@@ -243,25 +243,34 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Test_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Test_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_Test_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Test2_vue__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Test2_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_Test2_vue__);
-Object.defineProperty(exports, "__esModule", { value: true });
-/* harmony reexport (default from non-hamory) */ __webpack_require__.d(exports, "Test", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Test_vue___default.a; });
-/* harmony reexport (default from non-hamory) */ __webpack_require__.d(exports, "Test2", function() { return __WEBPACK_IMPORTED_MODULE_1__components_Test2_vue___default.a; });
-/* harmony export (immutable) */ exports["install"] = install;
+'use strict';
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Test2 = exports.Test = undefined;
+exports.install = install;
 
+var _Test = __webpack_require__(0);
+
+var _Test2 = _interopRequireDefault(_Test);
+
+var _Test3 = __webpack_require__(1);
+
+var _Test4 = _interopRequireDefault(_Test3);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Install the components
 function install(Vue) {
-  Vue.component('test', __WEBPACK_IMPORTED_MODULE_0__components_Test_vue___default.a);
-  Vue.component('someline-table-test', __WEBPACK_IMPORTED_MODULE_1__components_Test2_vue___default.a);
+  Vue.component('test', _Test2.default);
+  Vue.component('someline-table-test', _Test4.default);
   /* -- Add more components here -- */
 }
 
 // Expose the components
+exports.Test = _Test2.default;
+exports.Test2 = _Test4.default;
 
 
 /* -- Plugin definition & Auto-install -- */
@@ -274,9 +283,10 @@ var plugin = {
   install: install
 };
 
-/* harmony default export */ exports["default"] = plugin;
+exports.default = plugin;
 
 // Auto-install
+
 var GlobalVue = null;
 if (typeof window !== 'undefined') {
   GlobalVue = window.Vue;
